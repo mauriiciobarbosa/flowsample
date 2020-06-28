@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="MissingConstraints">
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/flow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#f8ba00"
+        android:orientation="horizontal"
+        android:padding="20dp"
+        app:constraint_referenced_ids="text_a,text_b,text_c"
+        app:flow_horizontalAlign="end"
+        app:flow_horizontalBias="1"
+        app:flow_horizontalGap="20dp"
+        app:flow_verticalGap="20dp"
+        app:flow_wrapMode="chain"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_a"
+        style="@style/FlowText"
+        android:layout_width="wrap_content"
+        android:text="A"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_min="100dp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_b"
+        style="@style/FlowText"
+        android:layout_width="wrap_content"
+        android:text="B"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_min="100dp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_c"
+        style="@style/FlowText"
+        android:layout_width="wrap_content"
+        android:text="C"
+        app:layout_constraintWidth_min="100dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
